@@ -1,0 +1,6 @@
+Task 1
+	Ask user for their name
+	Ask user for their birth year
+	Output their name and how old they are in years, months and seconds
+
+
