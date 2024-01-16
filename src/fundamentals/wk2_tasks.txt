@@ -4,3 +4,15 @@ Task 1
 	Output their name and how old they are in years, months and seconds
 
 
+Task 2
+    You are a transporter of metal
+    You have a small truck that can only carry 5 tonnes of metal
+
+    Ask the user how many tonnes of0 metal they want to transport.
+    Determine how many trips you will need.
+
+    %       = remainder of division statement
+
+    if statements
+
+    Bonus. Charge X amount of dollars per trip. Invoice the customer.

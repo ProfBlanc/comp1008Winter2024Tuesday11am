@@ -8,7 +8,8 @@ public class Week2 {
     public static void main(String[] args) {
 
         //output();
-        input();
+        //input();
+        task2();
     }
 
     /*
@@ -63,6 +64,49 @@ public class Week2 {
                 f       decimal number
 
          */
+
+    }
+
+    static void task1(){
+
+        Scanner userInfo = new Scanner(System.in);
+        System.out.print("What is your name? ");
+        String name = userInfo.nextLine();
+        System.out.print("What year were you born?");
+        short age = userInfo.nextShort();
+
+        int ageInYears = 2024 - age;
+        int ageInMonths = ageInYears * 12;
+        int ageInSeconds = 60 * 60 * 24 * 365 * ageInYears;
+
+        System.out.printf("Your name is %s. You are %d years old. " +
+                "You are %d months old. You are %d seconds old",
+                name, ageInYears, ageInMonths, ageInSeconds);
+
+
+    }
+
+    static void task2(){
+
+        double costPerTrip = 15.25;
+        int tonneLimit = 5;
+        Scanner userInfo = new Scanner(System.in);
+
+        System.out.println("They call me the Transporter. " +
+                "I can transport unlimited tonnes matel at a rate of " + costPerTrip + " per trip." +
+                "I can transport a maximum of " + tonneLimit + " tonnes per trip.");
+        System.out.println("How many tonnes of metal do you need to transport");
+        int userRequest = userInfo.nextInt();
+
+        int trips = userRequest / tonneLimit;
+        if(userRequest % tonneLimit != 0)
+            trips++;
+
+        double cost = trips * costPerTrip;
+
+        System.out.printf("You need to transport %d tonnes of metal. " +
+                "Reminder, my rate is %.2f. For %d trips, the total cost is $%.2f",
+                userRequest, costPerTrip, trips, cost);
 
     }
 
