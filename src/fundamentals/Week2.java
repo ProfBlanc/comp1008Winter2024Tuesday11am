@@ -199,12 +199,25 @@ BYTE        127         -128        -127        -126
         int numberToGuess = random.nextInt(MIN_VALUE, MAX_VALUE);
         int GUESS_LIMITS = 3;
         int guessCounter = 0;
+        Scanner userInput = new Scanner(System.in);
 
         System.out.printf("Welcome to our game%nYou will have %d guess to " +
-                "guess a number between %d and %d", GUESS_LIMITS, MIN_VALUE, MAX_VALUE);
+                "guess a number between %d and %d%n", GUESS_LIMITS, MIN_VALUE, MAX_VALUE);
 
         while(guessCounter < GUESS_LIMITS){
             System.out.printf("Enter Guess #%d of %d: ", guessCounter + 1, GUESS_LIMITS);
+            int userGuess = userInput.nextInt();
+            if(userGuess == numberToGuess){
+                System.out.println("Congrats! You did it! The number to " +
+                        "guess was " + numberToGuess);
+                break;
+            }
+            else{
+                System.out.printf("Sorry. %d was not the number to guess%n", userGuess);
+                String hint = userGuess < numberToGuess ? "higher" : "lower";
+                System.out.println("The number to guess is " + hint);
+                System.out.printf("You have %d guesses remaining%n", GUESS_LIMITS - (guessCounter + 1));
+            }
             guessCounter++;
         }
     }
