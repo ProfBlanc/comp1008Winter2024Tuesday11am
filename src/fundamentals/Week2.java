@@ -1,5 +1,6 @@
 package fundamentals;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Week2 {
@@ -9,7 +10,8 @@ public class Week2 {
 
         //output();
         //input();
-        task2();
+       // task2();
+        guessingGame();
     }
 
     /*
@@ -108,6 +110,103 @@ public class Week2 {
                 "Reminder, my rate is %.2f. For %d trips, the total cost is $%.2f",
                 userRequest, costPerTrip, trips, cost);
 
+    }
+
+    static void typecasting(){
+
+        String value = "123";
+
+        int v1 = Integer.parseInt(value); // from String to int
+        double v2 = Double.parseDouble(value);
+
+        //above = conversion
+
+        //change from one data type to another?
+
+        //implicity => upsizing / literal movement
+
+        float f1 = 123f;
+        double d1 = f1; // implicity typecasting
+
+        short s1 = 1234;
+        int i1 = s1;
+
+        int example1 = 130;
+        byte b1 = (byte) example1;  ///explicit typecasting
+
+        /*
+
+        -128                                    127
+
+
+INT        127         128         129         130
+BYTE        127         -128        -127        -126
+        -126
+         */
+
+
+        method((byte)123);  //whole number => int     decimal number => double
+
+        double d2 = 123d;
+        float f2 = 1234;
+
+        method((float)30.3f);
+    }
+
+    static void greet(String name){
+        //System.out.println("Hello " + name);
+        greet(name, 18);
+    }
+    static void greet(String name, int age){
+        age = Math.max(age, 18);
+        System.out.println("Hello " + name + "! You are " + age + " years old");
+    }
+    static void greet(int age, String name) {
+
+        greet(name, age);
+    }
+    //method overloading: adding a variation to a method
+    static void callingMethods(){
+
+        greet("Ben");
+        greet(100, "John");
+        greet("Joe", 90);
+    }
+    static void method(byte v1){
+        System.out.println("The value is " + v1);
+      }
+
+      static void method(long v1){
+        System.out.println("The value is " + v1 + " from Long arg");
+
+      }
+    static void method(float v1){
+        System.out.println("The value is " + v1 + " from Float arg");
+    }
+
+
+    static void guessingGame(){
+
+        // ask the user to guess a number between 1 and 10
+        // limit their attempts to 3 attempts
+        // on each attempt, if incorrect. Hint: higher or lower
+        // if correct, congratulate user
+        // if user does not correctly guess number, tell them to study more
+
+        Random random = new Random();
+        int MIN_VALUE = 1;
+        int MAX_VALUE = 10;
+        int numberToGuess = random.nextInt(MIN_VALUE, MAX_VALUE);
+        int GUESS_LIMITS = 3;
+        int guessCounter = 0;
+
+        System.out.printf("Welcome to our game%nYou will have %d guess to " +
+                "guess a number between %d and %d", GUESS_LIMITS, MIN_VALUE, MAX_VALUE);
+
+        while(guessCounter < GUESS_LIMITS){
+            System.out.printf("Enter Guess #%d of %d: ", guessCounter + 1, GUESS_LIMITS);
+            guessCounter++;
+        }
     }
 
 }
