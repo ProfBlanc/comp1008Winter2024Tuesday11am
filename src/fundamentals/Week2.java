@@ -101,7 +101,7 @@ public class Week2 {
         int trips = userRequest / tonneLimit;
         if(userRequest % tonneLimit != 0)
             trips++;
-
+//
         double cost = trips * costPerTrip;
 
         System.out.printf("You need to transport %d tonnes of metal. " +
