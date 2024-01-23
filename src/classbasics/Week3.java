@@ -3,6 +3,16 @@ package classbasics;
 public class Week3 {
 
     public static void main(String[] args) {
+        example2();
+    }
+    static void example2(){
+
+        Cellphone c1 = new Cellphone("iPhone", 123,
+                new double[]{123,456}, true, Cellphone.HardDriveTypes.SATA);
+
+    }
+    static void example1(){
+
         String s = "hello";
         Laptop dell = new Laptop();
 
@@ -31,5 +41,6 @@ public class Week3 {
                 new double[]{123, 456});
 
         System.out.println(asus.model);
+
     }
 }
