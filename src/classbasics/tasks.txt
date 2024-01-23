@@ -1,0 +1,15 @@
+Task 1
+Create a class named Cellphone
+    give the class 5 attributes
+        1 String
+        2 numerical
+        1 array
+        1 boolean
+    Create 3 constrcutors: default + 2 others
+
+Task 2
+In week 3 main method, instantiate the Cellphone class 3 ways
+    using default constructor
+    using the two other constructors
+
+    output 1 attribute of each Cellphone object

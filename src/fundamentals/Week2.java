@@ -187,11 +187,6 @@ BYTE        127         -128        -127        -126
 
     static void guessingGame(){
 
-        // ask the user to guess a number between 1 and 10
-        // limit their attempts to 3 attempts
-        // on each attempt, if incorrect. Hint: higher or lower
-        // if correct, congratulate user
-        // if user does not correctly guess number, tell them to study more
 
         Random random = new Random();
         int MIN_VALUE = 1;

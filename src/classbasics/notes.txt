@@ -1,0 +1,13 @@
+Class:
+    A blueprint
+        outlines how to create something
+            attributes and actions
+            characteristics and behaviours
+    What create a class: to be able to recreate something
+
+something created = object
+Object
+    the creation of a class
+        instantiate = follow blueprint to create object
+
+When you create a class, you create a new Data Type
