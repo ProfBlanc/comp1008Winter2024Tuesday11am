@@ -5,7 +5,7 @@ Create a class named Cellphone
         2 numerical
         1 array
         1 boolean
-    Create 3 constrcutors: default + 2 others
+    Create 3 constructors: default + 2 others
 
 Task 2
 In week 3 main method, instantiate the Cellphone class 3 ways
