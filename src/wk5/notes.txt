@@ -28,7 +28,10 @@ You are creating a College class
         available programs: list (arraylist) of values
         choose a single program: one of the available programs
             six instance variables
-
         generate a revenue value: tuition amount times the number of students
         create a methods that determine if many students are enrolled
             many = defined by 5,000 or more students
+        generate 2 constructors: default + 1 other constructor
+
+Factory Method
+    a method that returns an object

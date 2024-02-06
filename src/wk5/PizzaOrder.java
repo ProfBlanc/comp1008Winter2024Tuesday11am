@@ -36,6 +36,7 @@ public class PizzaOrder {
         this.toppings = toppings;
         setToppings();
         setPrice();
+        setTimeToPrepare();
 
     }
 
@@ -125,5 +126,36 @@ public class PizzaOrder {
             }
         }
 
+    }
+
+    public PizzaOrder(String toppings, int numberOfSlices) {
+        this.toppings = toppings;
+        setToppings();
+        setNumberOfSlices(numberOfSlices);
+        setPrice();
+        setTimeToPrepare();
+    }
+
+    public static PizzaOrder MediumPepperoni(){
+        return new PizzaOrder("pepperoni,cheese", 6);
+    }
+    public static PizzaOrder PartySizedPlainPizza(){
+        return new PizzaOrder("cheese", 12);
+    }
+    public static PizzaOrder PartySizedPizza(String toppings) {
+        return new PizzaOrder(toppings, 12);
+    }
+
+    //generating a toString method: summarize the values of the object
+
+    @Override
+    public String toString() {
+        return "PizzaOrder{" +
+                "toppings='" + toppings + '\'' +
+                ", numberOfSlices=" + numberOfSlices +
+                ", numberOfToppings=" + numberOfToppings +
+                ", timeToPrepare=" + timeToPrepare +
+                ", price=" + price +
+                '}';
     }
 }
