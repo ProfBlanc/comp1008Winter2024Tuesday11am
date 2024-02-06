@@ -1,0 +1,18 @@
+PizzaOrder
+    allow the user to order a pizza
+        user chooses
+            toppings
+            number of slices
+        we (the program)
+            accept/allow certain toppings
+            allow price discounts (students, elderly)
+
+
+            calculate a price based on number of slices
+                create instance variable that is not modifiable by
+                user. calculation of number of slices times a price
+                create a getter and setter
+            calculate time to prepare based on number of toppings and slices
+                instance variable, setter/getter, document
+
+            store restaurant address and owner
