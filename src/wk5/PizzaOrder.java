@@ -1,5 +1,7 @@
 package wk5;
 
+import java.util.ArrayList;
+
 /**
  * This is a cool project that my prof decided to do because he loves pizza
  * However, I am learning so mush. The downside is that now I want to eat pizza
@@ -11,8 +13,15 @@ package wk5;
  */
 public class PizzaOrder {
 
+    public static final String owner = "Ben Blanc";
+    public static final String address = "1 Georgian Drive";
+
+
     /** Comma separated values representing the toppings of a pizza */
-    String toppings;
+    private String toppings;
+
+    private ArrayList<String> toppingsWeAreAllowing = new ArrayList<>();
+
     private int numberOfSlices = 4;
     private final double pricePerSlice = 2.25;
 
@@ -22,6 +31,22 @@ public class PizzaOrder {
     private double price;
 
     public PizzaOrder(){}
+
+    public PizzaOrder(String toppings) {
+        this.toppings = toppings;
+        setToppings();
+        setPrice();
+
+    }
+
+    public int getNumberOfSlices() {
+        return numberOfSlices;
+    }
+
+    public void setNumberOfSlices(int numberOfSlices) {
+        if(numberOfSlices == 4 || numberOfSlices == 6 || numberOfSlices == 8 || numberOfSlices == 12)
+            this.numberOfSlices = numberOfSlices;
+    }
 
     /**
      * Returns the price of the pizza order
@@ -69,5 +94,36 @@ public class PizzaOrder {
      */
     public void setTimeToPrepare() {
         timeToPrepare += numberOfSlices + numberOfToppings;
+    }
+
+    public String getToppings() {
+        String toppings = "";
+
+        for(String topping : toppingsWeAreAllowing){
+            toppings += topping + "\t";
+        }
+        return toppings;
+    }
+
+
+    public void setToppings() {
+        //pepperoni, cheese, pineapple
+        ArrayList<String> companyAllowedToppings = new ArrayList<>();
+
+        companyAllowedToppings.add("pepperoni");
+        companyAllowedToppings.add("cheese");
+        companyAllowedToppings.add("bacon");
+        companyAllowedToppings.add("chicken");
+
+        for(String topping : toppings.split(",")){
+            //System.out.println(topping);  // pepperoni
+                                            // cheese
+                                            //pineapple
+            if(companyAllowedToppings.contains(topping)){
+                numberOfToppings++;
+                toppingsWeAreAllowing.add(topping);
+            }
+        }
+
     }
 }

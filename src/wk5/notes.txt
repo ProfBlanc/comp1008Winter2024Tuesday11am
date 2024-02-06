@@ -16,3 +16,19 @@ PizzaOrder
                 instance variable, setter/getter, document
 
             store restaurant address and owner
+                final static variable
+
+
+You are creating a College class
+    college has a
+        name: any value
+        address: any value
+        number of students : at least 1,000
+        tuition amount : at least 2,000
+        available programs: list (arraylist) of values
+        choose a single program: one of the available programs
+            six instance variables
+
+        generate a revenue value: tuition amount times the number of students
+        create a methods that determine if many students are enrolled
+            many = defined by 5,000 or more students

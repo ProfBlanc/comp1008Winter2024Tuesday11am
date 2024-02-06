@@ -6,8 +6,12 @@ public class Week5 {
     public static void main(String[] args) {
 
 
-        PizzaOrder pizzaOrder = new PizzaOrder();
-        pizzaOrder.getPrice();
-        String toppings = pizzaOrder.toppings;
+        PizzaOrder pizzaOrder = new PizzaOrder("pepperoni,cheese,blah");
+        System.out.println(pizzaOrder.getToppings());
+        System.out.println(pizzaOrder.getPrice());
+
+        String owner = PizzaOrder.owner;
+
+
     }
 }
