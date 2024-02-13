@@ -8,7 +8,14 @@ public class Week6 {
 
     //psvm+tab
     public static void main(String[] args) {
-        example2();
+        example3();
+    }
+    static void example3(){
+        Car c1 = new Car();
+        c1.setTransmission(Car.TransmissionType.MANUAL);
+        c1.setTransmission("automatic");
+
+        //1 Georgian123
     }
     static void example1(){
         //ArrayList<Reference Data Type> name = new ArrayList<>();

@@ -10,3 +10,10 @@ Car class
     double speed: 0-300:
     transmission: manual or auto
     be back at 11:58
+
+
+Add 2 constructors to the Car class
+    default
+    4 args
+
+Test both constructors as test cases using regular test case @Test
