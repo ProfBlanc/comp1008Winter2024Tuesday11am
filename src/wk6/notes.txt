@@ -1,0 +1,12 @@
+Unit Testing
+    testing a method to determine if it behaves correctly
+        correctly means as expected
+        behaves means outputs (returns) a value
+    unit tesint
+
+Car class
+    String color: accept 3 colors
+    int number of doors: 2, 4, 5
+    double speed: 0-300:
+    transmission: manual or auto
+    be back at 11:58
