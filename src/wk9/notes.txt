@@ -1,0 +1,25 @@
+File Manipulation
+    saving data to the file system
+        persistant
+            data will live for as long as you want it to => until deleted
+
+two packages
+    java.io.(multiple classes)
+    java.nio.(multiple classes)
+
+classes
+    Path                        the location of a file or folder
+    Paths * not be avoided
+    File                        create an object to store value
+                                of ONE specific file or folder
+    Files                       class with static methods
+
+
+Task
+Create a student organizer app
+    Ask the user for a year & semester
+        Create a directory in wk9: wk9/{year}/{semester}
+            wk9/2024/winter
+
+    Continually Ask the user for a course until the type "quit" or ""
+    Ask the user enter their grades for mid-term and final exam for EACH course
