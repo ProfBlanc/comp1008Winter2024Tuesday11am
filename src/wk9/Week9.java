@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
+import java.util.Scanner;
 
 public class Week9{
     static void example1(){
@@ -118,8 +119,72 @@ public class Week9{
             System.err.println(e);
         }
     }
+    static boolean validateYear(String year){
+        boolean isInvalid = false;
+        if(year.length() == 4){
+            for(char digit : year.toCharArray()){
+                if(digit >= 48 || digit <= 57){
+                }
+                else{
+                    isInvalid = true;
+                    break;
+                }
+            }
+        }
+        return isInvalid;
+    }
+    static void funtask(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to our Student Organizer app");
+        System.out.println("Enter the year");
+        String year = input.nextLine();
+        if(validateYear(year)){
+            System.err.println("Invalid year!");
+        }
+        else{
+            System.out.println("Enter the semester");
+            String semester = input.nextLine();
+            Path rootPath = Path.of("./src/wk9/" + year + "/" + semester);
+            try{
+                Files.createDirectories(rootPath);
+
+                System.out.println("Start to ask user for their courses");
+                while(true){
+System.out.println(String.format("Enter a course for the %s semester " +
+        "of year %s. Enter quit or '' to escape", semester, year));
+                    String userInput = input.nextLine();
+                    if(userInput.trim().length() == 0 ||
+                            userInput.toLowerCase().charAt(0) == 'q'){
+                        break;
+                    }
+
+                    //
+                    Files.createDirectory(rootPath.resolve(userInput));
+
+                }
+
+                File[] courses = rootPath.toFile().listFiles();
+                for(File course : courses){
+                    System.out.println("Enter the mid-term grade for the course " + course.getName());
+                    String midtermGrade = input.nextLine();
+
+                    System.out.println("Enter the final grade for the course " + course.getName());
+                    String finalGrade = input.nextLine();
+
+Files.writeString(rootPath.resolve(course.getName()).resolve("mid-term.txt"), midtermGrade);
+Files.writeString(rootPath.resolve(course.getName()).resolve("final.txt"), finalGrade);
+                }
+
+            }
+            catch (Exception e){
+                System.err.println(e);
+            }
+        }
+
+    }
     public static void main(String[] args) {
-        example10();
+        //example10();
+        funtask();
     }
 
 }
