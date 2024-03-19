@@ -44,3 +44,87 @@ Create a Cat based on Animal
     constructors: 3: 2 constructors of Animal + constructor that accepts 6 args
     method: isScary is overridden: weight > 300 pounds
     override to toString to summarize all 6 instance variables
+
+
+Polymorphism
+    greek word
+    poly        many
+    morphism    body/forms
+
+Overriding              child class creates a new version of method
+Overloading             creating a new variable of a method
+
+
+Concrete class              what we've been doing so far. class that you can instantiate
+
+Abstract class
+Interface
+
+    Cannot be instantiated. Need to be part of another class
+Abstract class
+    dedicated super class
+    have same features of a concrete class
+        instance variables, constructors, methods, constants
+    additional feature:     abstract method
+            is an idea/concept that has no default implementation/body
+
+    inner component of a bigger object
+
+interface
+    external component of a bigger object
+    only contains abstract methods & constants
+        methods with no default implementation
+    accessibility is public
+    an entity that is a list of requirements
+
+A concrete can only extend/inherit ONE other class (concrete or abstract)
+A concrete class can implement multiple interfaces
+If a concrete class extends an abstract class with abstract methods, it must implement that abstract methods
+
+Me: State an object
+You: If object should be concrete class, abstract class, or interface
+
+1) Does this object exist by itself
+    Yes: Concrete
+    No: It is a component
+
+2) Is this component an Internal component of bigger object or external component
+    Internal: Abstract
+    External: Interface
+
+Table
+Chair
+
+Lung
+Heart
+
+Doorknob
+Hair
+
+
+
+
+_______________________
+
+House
+Apartment: Room 101
+Door: abstract  interface
+Floor:  abstract
+
+
+Game part 2:
+Me: State a feature
+You: feature exists in concrete, abstract, interface, combo
+
+constructors:   CA
+
+constants:      CIA
+
+regular
+methods         CA
+
+abstract        AI
+methods
+
+instance
+variables       CA

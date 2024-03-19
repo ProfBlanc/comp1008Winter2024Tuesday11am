@@ -35,6 +35,7 @@ public class Week10 {
     static void example3(){
         //super        //sub
         Human h1 = new Superhero();
+        System.out.println(h1 instanceof Superhero);
 
         h1.goToSleep();
         System.out.println(h1);
@@ -46,5 +47,10 @@ public class Week10 {
             System.out.println(h);
         }
 
+    }
+
+    static void example4(){
+
+        //Shape s = new Shape();
     }
 }
