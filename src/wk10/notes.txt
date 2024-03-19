@@ -1,0 +1,46 @@
+Inheritance
+    Creating a class based on another class
+    SuperHero   a Human with extra features
+    A head start, where you can USE features of existing classes
+    What can you use/what is accessible?
+        instance variables
+        methods
+            normal
+            constructors
+                * only default constructor is inherited
+        constants
+        * all non-private
+
+    Note that you cannot remove any entites
+    Private entites are not accessible. They may be accessible via
+    public wrappers/methods
+
+Polymorphism
+
+Terms
+
+OLD                                     NEW
+
+parent                                  child
+base                                    derived
+super                                   sub
+
+
+
+In java all classes inherit from the base data type class
+Object
+
+
+Create a class named Animal
+    instance variables
+        name, legs, color, species
+    constructors: 2: default + 4-args
+    method: isScary: yes if more than 4 legs
+    override to toString to summarize all 4 instance variables
+
+Create a Cat based on Animal
+    new instance variables of
+        weight, whiskers
+    constructors: 3: 2 constructors of Animal + constructor that accepts 6 args
+    method: isScary is overridden: weight > 300 pounds
+    override to toString to summarize all 6 instance variables
