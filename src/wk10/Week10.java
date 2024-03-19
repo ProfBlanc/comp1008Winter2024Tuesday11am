@@ -3,7 +3,7 @@ package wk10;
 public class Week10 {
 
     public static void main(String[] args) {
-        example2();
+        example3();
     }
     static void example1(){
 
@@ -27,6 +27,24 @@ public class Week10 {
         batman.power = "money/strengh/witty lines/sneaking up behind you";
         batman.heroName = "Batman";
         System.out.println(batman);
+
+        Superhero batman2 = new Superhero(bruce, "Batman", "strength", 123456);
+
+    }
+
+    static void example3(){
+        //super        //sub
+        Human h1 = new Superhero();
+
+        h1.goToSleep();
+        System.out.println(h1);
+        //h1.testMethod();
+
+        Human[] humans = {new Human(), new Superhero()};
+
+        for(Human h : humans){
+            System.out.println(h);
+        }
 
     }
 }

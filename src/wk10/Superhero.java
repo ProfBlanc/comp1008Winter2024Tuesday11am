@@ -18,6 +18,14 @@ public class Superhero extends Human{
     public Superhero(String name, int age, double weight){
         super(name, age, weight);
     }
+    public Superhero(Human human, String heroName, String power, double strength){
+        super(human.name, human.age, human.getWeight());
+        this.heroName = heroName;
+        this.power = power;
+        this.strength = strength;
+
+        super.name = "hare";
+    }
 
     @Override
     void goToSleep(){
@@ -30,5 +38,8 @@ public class Superhero extends Human{
         return "Superhero" + super.toString().substring(5, upToLastChar)
                 + String.format(", Hero Name = %s, Strength = %.0f, Super Power = %s}", heroName, strength, power)
                 ;
+    }
+    void testMethod(){
+        System.out.println("Only from superhero");
     }
 }
