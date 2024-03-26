@@ -1,0 +1,40 @@
+Interface
+    a list of requirements
+        everything is public
+        series of abstracts methods
+            a method with no default body
+
+CollegeCourse
+    startDate
+    endDate
+    Syllabus
+    instructor
+    assignments
+    exams
+
+
+
+Let's create
+    An abstract class named
+        PublicSpeaker
+    Interfaces
+        InteractiveGame
+        PowerPoint
+    concrete class
+        Professor
+
+An interface can EXTEND another interface
+    FederalLaws
+    ProvinceLaws
+    MunicipalLaws
+    InternationalLaws
+
+Event:  abstract
+
+    abstracts that extend Event
+
+            MouseEvent
+                onClick:    does every element have a default action of onClick
+                onContextClick/onRightClick():
+            WindowEvent
+            Keyboard
